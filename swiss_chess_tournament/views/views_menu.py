@@ -14,25 +14,25 @@ class ViewApp:
         print(" [3] ♖  Quitter l'application")
         print("\n")
     @staticmethod   
-    def display_player_menu():
+    def display_players_menu():
         print("\n")
         print("♘♔♙♗  MENU JOUEURS ♗♙♔♘")
         print("\n")
-        print(" [1] ♗ Ajouter un joueur")
-        print(" [2] ♘ Modifier un joueur")
-        print(" [3] ♙ Liste des joueurs")
+        print(" [1] ♗  Ajouter un joueur")
+        print(" [2] ♘  Modifier un joueur")
+        print(" [3] ♙  Liste des joueurs")
         print("\n")
-        print(" [4] ♔ Retour au menu principal")
+        print(" [4] ♔  Retour au menu principal")
         print("\n")
     @staticmethod   
-    def display_tournament_menu():
+    def display_tournaments_menu():
         print("\n")
         print("♘♔♙♗  MENU TOURNOIS ♗♙♔♘")
         print("\n")
-        print(" [1] ♗ Nouveau tournoi")
-        print(" [2] ♘ Charger un tournoi")
-        print(" [3] ♙ Liste des tournois")
+        print(" [1] ♗  Nouveau tournoi")
+        print(" [2] ♘  Charger un tournoi")
+        print(" [3] ♙  Liste des tournois")
         print("\n")
-        print(" [4] ♔ Retour au menu principal")
+        print(" [4] ♔  Retour au menu principal")
         print("\n")
         
