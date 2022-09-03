@@ -1,8 +1,8 @@
 class ViewApp:
     def __init__(self):
         pass
-    @staticmethod
-    def display_main_menu():
+
+    def display_main_menu(self):
         print("\n")
         print("♘  Bienvienue dans SWISS CHESS TOURNAMENT ♘")
         print("\n")
@@ -13,8 +13,19 @@ class ViewApp:
         print("\n")
         print(" [3] ♖  Quitter l'application")
         print("\n")
-    @staticmethod   
-    def display_players_menu():
+
+        choice_main_menu = int(input("\n Veuillez faire un choix : "))
+
+        while choice_main_menu != 0:
+            if choice_main_menu == 1:
+                self.display_players_menu()
+            elif choice_main_menu == 2:
+                self.display_tournaments_menu()
+            elif choice_main_menu == 3:
+                print("invalid choice")
+            return choice_main_menu
+
+    def display_players_menu(self):
         print("\n")
         print("♘♔♙♗  MENU JOUEURS ♗♙♔♘")
         print("\n")
@@ -24,8 +35,8 @@ class ViewApp:
         print("\n")
         print(" [4] ♔  Retour au menu principal")
         print("\n")
-    @staticmethod   
-    def display_tournaments_menu():
+
+    def display_tournaments_menu(self):
         print("\n")
         print("♘♔♙♗  MENU TOURNOIS ♗♙♔♘")
         print("\n")
@@ -35,4 +46,3 @@ class ViewApp:
         print("\n")
         print(" [4] ♔  Retour au menu principal")
         print("\n")
-        
