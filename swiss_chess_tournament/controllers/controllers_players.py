@@ -13,6 +13,7 @@ class PlayersApp:
         self.birthday = PlayersApp().ctrl_input("date", " Date de naissance: ")
         self.genre = PlayersApp().ctrl_input("genre", " Sexe F ou M: ")
         self.rank = PlayersApp().ctrl_input("number", " Classement: ")
+
         return [self.name, self.surname, self.birthday, self.genre, self.rank]
 
     def ctrl_input(self, form, desc):
@@ -41,8 +42,8 @@ class PlayersApp:
         elif self.form == "date":
             while True:
                 self.input = input(desc)
-                date = datetime.strptime(self.input, "%d/%m/%Y")
-                date = date.date()
+                dt_convert = datetime.strptime(self.input, "%d/%m/%Y")
+                dt_convert = dt_convert.date()
                 break
             return self.input
         return

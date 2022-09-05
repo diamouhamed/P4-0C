@@ -23,18 +23,18 @@ class PlayerModels:
             self.data_input()
 
     def data_db(self, id):
-        """Serialized informations using TinyDB"""
-        query = Query()
-        data = (
+        """Inserting some data multiple informations using TinyDB"""
+        Q = Query()
+        DT = (
             TinyDB("swiss_chess_tournament/data/db.json")
             .table("players")
-            .search(query.id == id)
+            .search(Q.id == id)
         )
-        self.name = data[0]["name"]
-        self.surname = data[0]["surname"]
-        self.birthday = data[0]["birthday"]
-        self.genre = data[0]["genre"]
-        self.rank = data[0]["rank"]
+        self.name = DT[0]["name"]
+        self.surname = DT[0]["surname"]
+        self.birthday = DT[0]["birthday"]
+        self.genre = DT[0]["genre"]
+        self.rank = DT[0]["rank"]
 
     def data_input(self):
         """Save multiple players"""
