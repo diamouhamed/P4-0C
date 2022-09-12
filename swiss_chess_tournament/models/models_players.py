@@ -5,7 +5,7 @@ from swiss_chess_tournament.views import views_players
 from swiss_chess_tournament.controllers import controllers_players
 
 
-class PlayerModels:
+class ModelsPlayers:
     def __init__(self):
         pass
 
@@ -39,7 +39,7 @@ class PlayerModels:
     def data_input(self):
         """Save multiple players"""
         table = TinyDB("swiss_chess_tournament/data/db.json").table("players")
-        call_input = controllers_players.PlayersApp().create_players()
+        call_input = controllers_players.ControllersPlayers().create_players()
 
         self.name = call_input[0]
         self.surname = call_input[1]

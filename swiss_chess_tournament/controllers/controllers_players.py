@@ -1,18 +1,18 @@
 from datetime import datetime
 
 
-class PlayersApp:
+class ControllersPlayers:
     def __init__(self):
         pass
 
     def create_players(self):
         """Creating a player"""
 
-        self.name = PlayersApp().ctrl_input("text", " Prénom: ")
-        self.surname = PlayersApp().ctrl_input("text", " Nom de famille: ")
-        self.birthday = PlayersApp().ctrl_input("date", " Date de naissance: ")
-        self.genre = PlayersApp().ctrl_input("genre", " Sexe F ou M: ")
-        self.rank = PlayersApp().ctrl_input("number", " Classement: ")
+        self.name = self.ctrl_input("text", " Prénom: ")
+        self.surname = self.ctrl_input("text", " Nom de famille: ")
+        self.birthday = self.ctrl_input("date", " Date de naissance: ")
+        self.genre = self.ctrl_input("genre", " Sexe F ou M: ")
+        self.rank = self.ctrl_input("number", " Classement: ")
 
         return [self.name, self.surname, self.birthday, self.genre, self.rank]
 

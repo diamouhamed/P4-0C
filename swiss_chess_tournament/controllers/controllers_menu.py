@@ -1,7 +1,9 @@
+from turtle import mode
+from swiss_chess_tournament.models import models_players
 from swiss_chess_tournament.views import views_players, views_welcome
 
 
-class MenuApp:
+class ControllerMenu:
     def __init__(self):
         pass
 
@@ -9,4 +11,10 @@ class MenuApp:
         views_welcome.ViewsWelcome().display_main_menu()
 
     def display_players_menu(self):
-        views_players.ViewsPlayers().display_players_menu()
+        exit_requested = False
+
+        while not exit_requested:
+            choice = self.display_main_menu()
+
+            if choice == "1":
+                print("choice 1")
